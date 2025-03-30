@@ -50,7 +50,6 @@ function App() {
     setShowPDF(true);
   };
 
-  // Split social links into two rows
   const firstRowLinks = socialLinks.slice(0, 5);
   const secondRowLinks = socialLinks.slice(5);
 
@@ -62,6 +61,7 @@ function App() {
             <img
               key={url}
               src={url}
+              alt={`Background ${index + 1}`}
               aria-hidden="true"
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-3000 ease-in-out ${
                 index === activeIndex 
@@ -85,7 +85,6 @@ function App() {
           </div>
 
           <div className="max-w-4xl mx-auto px-4 space-y-8">
-            {/* First row */}
             <div className="flex justify-center gap-8">
               {firstRowLinks.map((link) => (
                 <a
@@ -109,7 +108,6 @@ function App() {
               ))}
             </div>
             
-            {/* Second row */}
             <div className="flex justify-center gap-8">
               {secondRowLinks.map((link) => (
                 <a

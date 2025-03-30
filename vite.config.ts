@@ -5,15 +5,8 @@ export default defineConfig({
   plugins: [react()],
   base: '/website_sronilsson/',
   build: {
-    assetsDir: 'assets',
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-        assetFileNames: 'assets/[name]-[hash][extname]',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-      },
-    },
+    outDir: 'dist',
+    emptyOutDir: true,
   },
   optimizeDeps: {
     exclude: ['lucide-react'],
