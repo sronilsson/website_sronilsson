@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/website_sronilsson/',
   build: {
     outDir: 'dist',
     emptyOutDir: true,
@@ -20,7 +20,7 @@ export default defineConfig({
   server: {
     middlewareMode: false,
     fs: {
-      strict: true,
+      strict: false,
     },
   },
 });
